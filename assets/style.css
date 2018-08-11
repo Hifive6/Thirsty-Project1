@@ -17,9 +17,33 @@ body, html {
 h1 {
     color: blue;
 }
-.parallax { 
+
+.dummy-div  {
+    background-color: white;
+
+}
+
+
+.parallax1 { 
     /* The image used */
-    background-image: url("http://www.guoguiyan.com/data/out/19/68432327-beer-wallpapers.jpg");
+    background-image: url("https://wallpaper-house.com/data/out/6/wallpaper2you_124602.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+.parallax2 { 
+    /* The image used */
+    background-image: url("https://wallpaper-house.com/data/out/6/wallpaper2you_124602.jpg");
 
     /* Full height */
     height: 100%; 
