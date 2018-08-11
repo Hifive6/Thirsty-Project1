@@ -1,0 +1,21 @@
+body, html {
+    height: 100%;
+    
+}
+
+h1 {
+    color: blue;
+}
+.parallax { 
+    /* The image used */
+    background-image: url("http://www.guoguiyan.com/data/out/19/68432327-beer-wallpapers.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
