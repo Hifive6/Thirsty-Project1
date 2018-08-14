@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-#img{
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-=======
+
 body, html {
     height: 100%;
     
@@ -25,33 +15,43 @@ h1 {
 
 
 .parallax1 { 
-    /* The image used */
-    background-image: url("https://wallpaper-house.com/data/out/6/wallpaper2you_124602.jpg");
 
-    /* Full height */
+    background-image: url("../images/center.jpg");
+
     height: 100%; 
 
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
-
 
 .parallax2 { 
-    /* The image used */
-    background-image: url("https://wallpaper-house.com/data/out/6/wallpaper2you_124602.jpg");
+  
+    background-image: url("../images/bar.jpg");
 
-    /* Full height */
     height: 100%; 
 
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
->>>>>>> 908053e4a7119fb70567f5612d5f64ab28cbc45b
+
+.parallax3 { 
+   
+    background-image: url("../images/beer2.jpg");
+
+    height: 100%; 
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Hanalei Fill', cursive;
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
+}
