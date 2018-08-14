@@ -1,35 +1,22 @@
-<<<<<<< HEAD
-#img{
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-=======
+
 body, html {
     height: 100%;
     
 }
 
-h1 {
-    color: blue;
-}
 
-.dummy-div  {
-    background-color: white;
 
-}
 
 
 .parallax1 { 
     /* The image used */
-    background-image: url("https://wallpaper-house.com/data/out/6/wallpaper2you_124602.jpg");
-
+    background-image: url("../images/space.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* Full height */
     height: 100%; 
+    margin-top: -50px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -43,7 +30,22 @@ h1 {
 
 .parallax2 { 
     /* The image used */
-    background-image: url("https://wallpaper-house.com/data/out/6/wallpaper2you_124602.jpg");
+    background-image: url("https://images.punkapi.com/v2/67.png");
+    
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.parallax3 { 
+    /* The image used */
+    background-image: url("https://wallpaper-house.com/data/out/6/wallpaper2you_124606.jpg");
 
     /* Full height */
     height: 100%; 
@@ -54,4 +56,111 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
 }
->>>>>>> 908053e4a7119fb70567f5612d5f64ab28cbc45b
+
+.search-div {
+    background-color: lightgrey;
+    padding: 25px;
+    border-radius: 5%;
+    opacity: .9;
+}
+
+.jumbotron {
+    background-image: url('http://getwallpapers.com/wallpaper/full/2/6/d/960991-backgrounds-green-1920x1200-tablet.jpg')
+}
+
+.footer{
+    background-image: url('http://getwallpapers.com/wallpaper/full/2/6/d/960991-backgrounds-green-1920x1200-tablet.jpg')
+}
+
+
+
+
+/* css for social buttons */
+
+.max-width{
+    max-width: 180px;
+    height: 180px;
+}
+
+.bd-width{
+    border-width: 2px;
+}
+
+
+
+body {
+    margin: 0;
+    background-color: rgb(158, 155, 152);
+    font-family: 'Raleway Dots', sans-serif;
+  }
+  
+ section {
+     background-color: rgb(224, 220, 220);
+     background-image: url('http://getwallpapers.com/wallpaper/full/2/6/d/960991-backgrounds-green-1920x1200-tablet.jpg');
+ }
+  
+  section #services {
+    text-align: center;
+    transform: translatez(0);
+  }
+  section #services h2 {
+    margin: 80px 0px 40px;
+    color: #fff;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  section #services li {
+    width: 120px;
+    height: 140px;
+    display: inline-block;
+    margin: 20px;
+    list-style: none;
+  }
+  section #services li div {
+    width: 120px;
+    height: 120px;
+    color: #74d4b3;
+    font-size: 3.4em;
+    text-align: center;
+    line-height: 120px;
+    background-color: rgb(148, 139, 139);
+    transition: all 0.5s ease;
+  }
+  section #services li a {
+    color: rgb(15, 110, 47);
+  }
+  section #services li div:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+  }
+  section #services li span {
+    width: 120px;
+    height: 20px;
+    display: block;
+    padding: 15px 0px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+  }
+ 
+
+
+@media screen and (max-width: 768px){
+    .max-width{
+        max-width: 100px;
+        height: 100px;
+    }
+
+    .font-size{
+        font-size: 20%;
+    }
+    .max-width{
+        display: none;
+    }
+    .hide{
+      display: none;
+    }
+}
+
