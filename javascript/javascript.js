@@ -1,5 +1,30 @@
-{/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript"> */}
+
+
+
+//This is the form we used to test the two ajaz calls and buttons for search and random
+//These are the id we used to grab information adn place them on the page
+
+
+{/* <form id="beer">
+
+  <label for="beer-input">Look for your beer</label>
+
+  <input type="text" id="search-input"><br>
+
+  
+  <!-- This button will trigger our AJAX call -->
+  
+  <input id="search" type="submit" value="Beer Search">
+  
+  <span class="validity"></span>
+</form>
+  
+<button id = "random">Random Search</button>
+
+<!-- <button id = "search">Search</button> -->
+
+<div id = "stuff" ></div> */}
+
   var baseUrl = "https://api.punkapi.com/v2/beers"
   
   
