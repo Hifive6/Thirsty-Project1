@@ -11,7 +11,7 @@
        }).then(function(response) {
          console.log(response);
          
-         var beerDiv = $("<div>")
+         var beerDiv = $("<div class='parallax1'>")
          var imageUrl = response[0].image_url;
          var image = $("<img>").attr("src", imageUrl);
  
