@@ -15,19 +15,14 @@
        }).then(function(response) {
          console.log(response);
          
-         var beerDiv = $("<div class='parallax1'>")
+         var beerDiv = $("<div class='parallax2'>")
          var imageUrl = response[0].image_url;
          var image = $("<img>").attr("src", imageUrl);
  
          
  
-         var name = response[0].name;
-         var date = response[0].first_brewed;
-         var description = response[0].description;
-         var food = response[0].food_pairing;
          
-         
-         beerDiv.append(image, name, date, description, food)
+         beerDiv.append(image)
          
  
          
@@ -74,7 +69,7 @@
 
 <div id = "stuff" ></div> */}
 
-
+/*
   var baseUrl = "https://api.punkapi.com/v2/beers"
   
   
@@ -143,3 +138,4 @@ randomUrl = "https://api.punkapi.com/v2/beers/random";
   });     
 })
 
+*/
