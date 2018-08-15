@@ -1,4 +1,7 @@
 
+
+
+
   
      $("#search").on("click", function(event){
         event.preventDefault();
@@ -41,6 +44,10 @@
      //$(document).on("click", "#search");
 
 
+{/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript"> */}
+
+
 
 
 //This is the form we used to test the two ajaz calls and buttons for search and random
@@ -66,6 +73,7 @@
 <!-- <button id = "search">Search</button> -->
 
 <div id = "stuff" ></div> */}
+
 
   var baseUrl = "https://api.punkapi.com/v2/beers"
   
