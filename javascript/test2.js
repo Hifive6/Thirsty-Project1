@@ -83,7 +83,7 @@ var config = {
   database.ref().on("value",function(snapshot){
     pullRandom = snapshot.val().random;
 
-    var results = response[0];
+    var results = pullRandom[0];
     console.log(results)
       
     var beerDiv = $("<div>")
