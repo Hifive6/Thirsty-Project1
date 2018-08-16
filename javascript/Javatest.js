@@ -38,127 +38,20 @@ $("#search").on("click", function(event){
      url: randomUrl,
      method: "GET"
    }).then(function(response){
-//     //  beerInfo(response);
+
       database.ref().set({
         random: response,  
         });
       })
 
 
-//     var results = response[0];
-//     console.log(results)
-      
-//     var beerDiv = $("<div>")
-//     var imageUrl = results.image_url;
-//     var image = $("<img>").attr("src", imageUrl);
 
-      
-     
-//     var name = results.name;
-//     var date = results.first_brewed;
-//     var description = results.description;
-//     var food = results.food_pairing;
-    
-     
-
-     
-//     // beerDiv.attr(image, name, date, description, food);
-//     beerDiv.append(image, name, date, description, food);
-//     // beerDiv.append(pullFire);
-      
-      
-//     console.log(results.name);
-//     console.log(results.first_brewed)
-//     console.log(results.description);
-//     console.log(results.food_pairing)
-
-
-//   $("#more-stuff").html(beerDiv);
-
-//    });
 
   });
-//     //results.length < 1 or == 0
-//     // if(response.length < 1 )//this is not right will need to change soon =)) 
-//     // { 
-//     //   console.log("world");
-//     //   $("#search-input").val( " " );
-//     //    //dalert("beer not found");
-//     //    //break;
-//     // }
-//     // else{
-//     //   console.log("hi")
-    
-//     // //figure this if else site
-//     // }   
-// //beerInfo(response);
-//     // 
-  
-//    });     
-//  });
-// //    database.ref().on("child")
 
 
 
 
-  // function beerInfo(response){
-
-    //console.log(response);
-    // var results = response[0];
-    //  //console.log(results)
-     
-    //  var beerDiv = $("<div>")
-    //  var imageUrl = results.image_url;
-    //  var image = $("<img>").attr("src", imageUrl);
-
-     
-    
-    //  var name = results.name;
-    //  var date = results.first_brewed;
-    //  var description = results.description;
-    //  var food = results.food_pairing;
-     
-     
-
-      
-
-    // beerDiv.append(image, name, date, description, food)
-//     $("#stuff").html(beerDiv);
-    
-    
-//     beerSearch.attr(image, name, date, description, food)
-     
 
 
-
-
-        
-  
-//   var url = baseUrl + "?beer_name=" + beerSearch;
-   
-
-//    $.ajax({
-//      url: url,
-//      method: "GET"
-//    }).then(function(response){
-//      console.log(response)
-
-//      //results.length < 1 or == 0
-//      if(response.length < 1 )//this is not right will need to change soon =)) 
-//      { 
-//        console.log("world");
-//        $("#search-input").val( " " );
-//         //dalert("beer not found");
-//         //break;
-//      }
-//      else{
-//        console.log("hi")
-     
-//      //figure this if else site
-//      }   
-// //beerInfo(response);
-//      // 
-     
-//    }); 
-   
  

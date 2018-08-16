@@ -112,97 +112,12 @@ var config = {
 
 
   $("#more-stuff").html(beerDiv);
-//   $("#random").on("click", function(event){
-//     event.preventDefault();
+
   })
-//     window.open("test2.html");
-   
-//  randomUrl = "https://api.punkapi.com/v2/beers/random";
-//    $.ajax({
-//      url: randomUrl,
-//      method: "GET"
-//    }).then(function(response){
-//     //  beerInfo(response);
-
-//     var results = response[0];
-//     console.log(results)
-      
-//     var beerDiv = $("<div>")
-//     var imageUrl = results.image_url;
-//     var image = $("<img>").attr("src", imageUrl);
-
-      
-     
-//     var name = results.name;
-//     var date = results.first_brewed;
-//     var description = results.description;
-//     var food = results.food_pairing;
-    
-     
-
-     
-//     // beerDiv.attr(image, name, date, description, food);
-//     beerDiv.append(image, name, date, description, food);
-//     // beerDiv.append(pullFire);
-      
-      
-//     console.log(results.name);
-//     console.log(results.first_brewed)
-//     console.log(results.description);
-//     console.log(results.food_pairing)
 
 
-//   $("#more-stuff").html(beerDiv);
-//     //results.length < 1 or == 0
-//     // if(response.length < 1 )//this is not right will need to change soon =)) 
-//     // { 
-//     //   console.log("world");
-//     //   $("#search-input").val( " " );
-//     //    //dalert("beer not found");
-//     //    //break;
-//     // }
-//     // else{
-//     //   console.log("hi")
-    
-//     // //figure this if else site
-//     // }   
-// //beerInfo(response);
-//     // 
-  
-//    });     
-//  });
-//   function beerInfo(response){
-
-//     console.log(response);
-//     var results = response[0];
-//     console.log(results)
-      
-//     var beerDiv = $("<div>")
-//     var imageUrl = results.image_url;
-//     var image = $("<img>").attr("src", imageUrl);
-
-      
-     
-//      var name = results.name;
-//     var date = results.first_brewed;
-//     var description = results.description;
-//     var food = results.food_pairing;
-    
-     
-
-     
-//     $("pullFire").attr(image, name, date, description, food)
-//     beerDiv.append(image, name, date, description, food)
-//     beerDiv.append(pullFire);
-      
-      
-//     console.log(results.name);
-//     console.log(results.first_brewed)
-//     console.log(results.description);
-//     console.log(results.food_pairing)
 
 
-//   $("#more-stuff").html(beerDiv);
-//   }
+
   
   
