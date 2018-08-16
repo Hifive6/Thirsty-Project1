@@ -1,0 +1,43 @@
+
+body, html {
+    height: 100%;
+    
+}
+
+.parallax2 { 
+
+    background-image: url("");
+    height: 100%; 
+    margin-top: -50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 { 
+  
+    background-image: url("../images/bar.jpg");
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.parallax4 { 
+    background-image: url("../images/beer2.jpg");
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1{
+    font-family: 'Hanalei Fill', cursive;
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
+}
