@@ -15,6 +15,7 @@ $("#search").on("click", function(event){
     event.preventDefault();
     
     beerSearch = $("#search-input").val();
+    
 
     
     
