@@ -9,18 +9,15 @@ body, html {
 
 
 .parallax1 { 
-<<<<<<< HEAD
 
     background-image: url("../images/center.jpg");
 
-=======
     /* The image used */
     background-image: url("../images/space.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
     /* Full height */
->>>>>>> 20930a28edb31c860442a4250729505a717df607
     height: 100%; 
     margin-top: -50px;
 
@@ -42,11 +39,6 @@ body, html {
     background-size: cover;
 }
 
-<<<<<<< HEAD
-.parallax3 { 
-   
-    background-image: url("../images/beer2.jpg");
-=======
 .parallax2 { 
     /* The image used */
     background-image: url("https://images.punkapi.com/v2/67.png");
@@ -65,7 +57,6 @@ body, html {
 .parallax3 { 
     /* The image used */
     background-image: url("https://wallpaper-house.com/data/out/6/wallpaper2you_124606.jpg");
->>>>>>> 20930a28edb31c860442a4250729505a717df607
 
     height: 100%; 
 
@@ -75,13 +66,6 @@ body, html {
     background-size: cover;
 }
 
-<<<<<<< HEAD
-h1{
-    font-family: 'Hanalei Fill', cursive;
-    font-family: 'Do Hyeon', sans-serif;
-    text-align: center;
-}
-=======
 .search-div {
     background-color: lightgrey;
     padding: 25px;
@@ -189,4 +173,3 @@ body {
     }
 }
 
->>>>>>> 20930a28edb31c860442a4250729505a717df607
