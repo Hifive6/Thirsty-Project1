@@ -13,6 +13,8 @@ var config = {
 
 $("#search").on("click", function(event){
     event.preventDefault();
+
+    window.open("test2.html");
     
     beerSearch = $("#search-input").val();
 
@@ -26,69 +28,30 @@ $("#search").on("click", function(event){
      });
    });
 
-//    database.ref().on("child")
+   $("#random").on("click", function(event){
+    event.preventDefault();
 
-
-
-
-//   function beerInfo(response){
-
-//     //console.log(response);
-//     var results = response[0];
-//      //console.log(results)
-     
-//      var beerDiv = $("<div>")
-//      var imageUrl = results.image_url;
-//      var image = $("<img>").attr("src", imageUrl);
-
-     
-    
-//      var name = results.name;
-//      var date = results.first_brewed;
-//      var description = results.description;
-//      var food = results.food_pairing;
-     
-     
-
-      
-
-//     beerDiv.append(image, name, date, description, food)
-//     $("#stuff").html(beerDiv);
-//     }
-    
-//     beerSearch.attr(image, name, date, description, food)
-     
-
-
-
-
-        
-  
-//   var url = baseUrl + "?beer_name=" + beerSearch;
+    window.open("test2.html");
    
+ randomUrl = "https://api.punkapi.com/v2/beers/random";
+   $.ajax({
+     url: randomUrl,
+     method: "GET"
+   }).then(function(response){
 
-//    $.ajax({
-//      url: url,
-//      method: "GET"
-//    }).then(function(response){
-//      console.log(response)
+      database.ref().set({
+        random: response,  
+        });
+      })
 
-//      //results.length < 1 or == 0
-//      if(response.length < 1 )//this is not right will need to change soon =)) 
-//      { 
-//        console.log("world");
-//        $("#search-input").val( " " );
-//         //dalert("beer not found");
-//         //break;
-//      }
-//      else{
-//        console.log("hi")
-     
-//      //figure this if else site
-//      }   
-// //beerInfo(response);
-//      // 
-     
-//    }); 
-   
+
+
+
+  });
+
+
+
+
+
+
  

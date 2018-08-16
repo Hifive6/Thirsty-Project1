@@ -42,7 +42,7 @@ var config = {
 
       
      
-     var name = results.name;
+    var name = results.name;
     var date = results.first_brewed;
     var description = results.description;
     var food = results.food_pairing;
@@ -80,38 +80,44 @@ var config = {
   }); 
   }); 
 
-//   function beerInfo(response){
+  database.ref().on("value",function(snapshot){
+    pullRandom = snapshot.val().random;
 
-//     console.log(response);
-//     var results = response[0];
-//     console.log(results)
+    var results = pullRandom[0];
+    console.log(results)
       
-//     var beerDiv = $("<div>")
-//     var imageUrl = results.image_url;
-//     var image = $("<img>").attr("src", imageUrl);
+    var beerDiv = $("<div>")
+    var imageUrl = results.image_url;
+    var image = $("<img>").attr("src", imageUrl);
 
       
      
-//      var name = results.name;
-//     var date = results.first_brewed;
-//     var description = results.description;
-//     var food = results.food_pairing;
+    var name = results.name;
+    var date = results.first_brewed;
+    var description = results.description;
+    var food = results.food_pairing;
     
      
 
      
-//     $("pullFire").attr(image, name, date, description, food)
-//     beerDiv.append(image, name, date, description, food)
-//     beerDiv.append(pullFire);
+    $("pullRandom").attr(image, name, date, description, food);
+    beerDiv.append(image, name, date, description, food);
+    beerDiv.append(pullRandom);
       
       
-//     console.log(results.name);
-//     console.log(results.first_brewed)
-//     console.log(results.description);
-//     console.log(results.food_pairing)
+    console.log(results.name);
+    console.log(results.first_brewed)
+    console.log(results.description);
+    console.log(results.food_pairing)
 
 
-//   $("#more-stuff").html(beerDiv);
-//   }
+  $("#more-stuff").html(beerDiv);
+
+  })
+
+
+
+
+
   
   
