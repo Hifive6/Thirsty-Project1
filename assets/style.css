@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 body, html {
     height: 100%;
@@ -12,18 +10,17 @@ body, html {
 
 .parallax1 { 
 
-    background-image: url("../images/center.jpg");
-
+    
 
     /* The image used */
-    background-image: url("../images/space.jpg");
+    background-image: url("../images/background.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
     /* Full height */
 
     height: 100%; 
-    margin-top: -50px;
+    margin-top: -190px;
 
     background-attachment: fixed;
     background-position: center;
@@ -39,13 +36,6 @@ body, html {
     opacity: .9;
 }
 
-.jumbotron1 {
-    background-image: url('http://getwallpapers.com/wallpaper/full/2/6/d/960991-backgrounds-green-1920x1200-tablet.jpg')
-}
-
-.footer1{
-    background-image: url('http://getwallpapers.com/wallpaper/full/2/6/d/960991-backgrounds-green-1920x1200-tablet.jpg')
-}
 
 
 
@@ -69,10 +59,7 @@ body {
     font-family: 'Raleway Dots', sans-serif;
   }
   
- section {
-     background-color: rgb(224, 220, 220);
-     background-image: url('http://getwallpapers.com/wallpaper/full/2/6/d/960991-backgrounds-green-1920x1200-tablet.jpg');
- }
+ 
   
   section #services {
     text-align: center;
@@ -140,4 +127,3 @@ body {
 }
 
 
->>>>>>> 159958ca671d8786e85a93a835571607c64383ba
