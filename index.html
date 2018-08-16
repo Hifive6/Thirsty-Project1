@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="javascript/javascript.js"></script>
+    <script src="javascript/firebasesearch.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <title>Document</title>
@@ -15,7 +18,7 @@
 
 <body>
 
-    <div class="jumbotron jumbotron-fluid text-center">
+    <div class="jumbotron1 jumbotron jumbotron-fluid text-center">
         <div class="container">
             <h1 class="display-4">THIRSTY?</h1>
             <p class="lead"></p>
@@ -30,9 +33,9 @@
         <div class="search-div ">
 
             <div class="search-bar">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Random Beer </button>
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+               <a href="beer.html">   <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></a>
+                <button id="random" class="btn btn-outline-success my-2 my-sm-0" type="submit"> Random Beer </button>
 
             </div>
 
@@ -54,7 +57,7 @@
 
 
     <!-- Footer -->
-    <footer style="background-color: rgb(5, 172, 60)" class="footer page-footer font-small blue">
+    <footer style="background-color: rgb(5, 172, 60)" class="footer1 page-footer font-small blue">
 
 
         <section>
@@ -107,7 +110,7 @@
 
 
     </div>
-
+    <script src="javascript/javascript.js"></script>
 </body>
 
 </html>
