@@ -14,7 +14,7 @@ var config = {
 $("#search").on("click", function(event){
     event.preventDefault();
 
-    window.open("test2.html");
+    window.open("test2.html", "_self");
     
     beerSearch = $("#search-input").val();
 
@@ -31,7 +31,7 @@ $("#search").on("click", function(event){
    $("#random").on("click", function(event){
     event.preventDefault();
 
-    window.open("test2.html");
+    window.open("test2.html", "_self");
    
  randomUrl = "https://api.punkapi.com/v2/beers/random";
    $.ajax({
