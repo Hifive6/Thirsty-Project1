@@ -14,7 +14,7 @@ var config = {
 $("#search").on("click", function(event){
     event.preventDefault();
 
-    window.open("test2.html");
+    window.location.href = "test2.html";
     
     beerSearch = $("#search-input").val();
     
@@ -31,6 +31,8 @@ $("#search").on("click", function(event){
 
    $("#random").on("click", function(event){
     event.preventDefault();
+
+    // window.location.href = "test2.html";
 
     window.open("test2.html");
    
