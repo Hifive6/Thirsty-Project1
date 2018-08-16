@@ -13,6 +13,8 @@ var config = {
 
 $("#search").on("click", function(event){
     event.preventDefault();
+
+    window.open("test2.html");
     
     beerSearch = $("#search-input").val();
 
