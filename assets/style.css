@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-
-body, html {
-    height: 100%;
-    
-}
-
-
-
-
 
 .parallax1 { 
 
@@ -31,12 +20,25 @@ body, html {
     background-size: cover;
 }
 
+.imageBackground{
+    background-image: url("../images/bottles.jpg");
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   } 
 
 .search-div {
     background-color: lightgrey;
     padding: 25px;
     border-radius: 5%;
     opacity: .9;
+}
+
+h1{
+    text-align: center;
 }
 
 .jumbotron1 {
@@ -137,7 +139,14 @@ body {
     .hide{
       display: none;
     }
+
+   .page{
+    background-image: url("../images/bottles.jpg");
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   } 
 }
-
-
->>>>>>> 159958ca671d8786e85a93a835571607c64383ba
