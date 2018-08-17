@@ -47,7 +47,7 @@ var config = {
 
       
      
-    var name = results.name;
+    name = results.name;
     var date = results.first_brewed;
     var description = results.description;
     var food = results.food_pairing;
@@ -101,7 +101,7 @@ var config = {
 
       
      
-    var name = results.name;
+    name = results.name;
     var date = results.first_brewed;
     var description = results.description;
     var food = results.food_pairing;
@@ -124,28 +124,43 @@ var config = {
 
   })
 
+
+
+
   $("#review-btn").on("click", function(event){
     event.preventDefault();
 
     
+    var newReview = $("#review-input").val();
     
-    reviewSearch = $("#review-input").val();
 
     
-    console.log(reviewSearch);
+    
     
     database.ref().push({
-      reviews: reviewSearch,  
-   
-  })
-  reviewSearch = $("#review-input").val(" ");
+      reviews: newReview,   
+  });
 
 
+  newReview = $("#review-input").val(" ")
+  
+  });
+
+
+database.ref().on("child_added", function(snapshot){
+    //console.log(snapshot.val());
+var fireReview = snapshot.val().reviews;
+console.log(fireReview);
+  //$("#review-table").prepend(review)
+
+  var newRow = $("<tr>").append(
+    $("<td>").text(name),
+    $("<td>").text("<br><hr>" + fireReview),
+  );
+
+  $("#review-table").prepend(newRow);
 });
 
-database.ref().on("child_added", function(reviewSnapshot){
-  console.log(reviewSnapshot.val());
-})
 
 
   
