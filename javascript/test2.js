@@ -36,7 +36,7 @@ var config = {
     var results = response[0];
     console.log(results)
       
-    var beerDiv = $("<div>")
+    // var beerDiv = $("<div>")
     var imageUrl = results.image_url;
     var image = $("<img>").attr("src", imageUrl);
 
@@ -51,8 +51,12 @@ var config = {
 
      
     $("pullFire").attr(image, name, date, description, food);
-    beerDiv.append(image, name, date, description, food);
-    beerDiv.append(pullFire);
+
+        // $().empty();    
+       $("h1").append(name);
+       $(".parallax2").append(image);
+    // beerDiv.append(image, name, date, description, food);
+    // beerDiv.append(pullFire);
       
       
     console.log(results.name);
@@ -61,7 +65,7 @@ var config = {
     console.log(results.food_pairing)
 
 
-  $("#more-stuff").html(beerDiv);
+  // $("#more-stuff").html(beerDiv);
     //results.length < 1 or == 0
     // if(response.length < 1 )//this is not right will need to change soon =)) 
     // { 
