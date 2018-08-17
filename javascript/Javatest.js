@@ -18,10 +18,6 @@ $("#search").on("click", function(event){
     
     beerSearch = $("#search-input").val();
     
-
-    
-    
-    
     console.log(beerSearch);
     
     database.ref().set({
@@ -29,18 +25,23 @@ $("#search").on("click", function(event){
      });
    });
 
+
+
+
+
    $("#random").on("click", function(event){
     event.preventDefault();
 
     // window.location.href = "test2.html";
 
     window.open("beer.html");
-   
- randomUrl = "https://api.punkapi.com/v2/beers/random";
+   randomUrl = "https://api.punkapi.com/v2/beers/random";
+ 
    $.ajax({
      url: randomUrl,
      method: "GET"
    }).then(function(response){
+     console.log(response);
 
       database.ref().set({
         random: response,  

@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 var config = {
     apiKey: "AIzaSyBiJq9sJSLN5FClhkkDqTo-fi9j4PxGykQ",
     authDomain: "thirsty-project1.firebaseapp.com",
@@ -16,27 +10,38 @@ var config = {
   };
   
 
-
+  //Initializing FireBase
   firebase.initializeApp(config);
 
+//setting our information from firebase into variable
   var database = firebase.database();
-       
+
+  //grabbing the value from firebase     
   database.ref().on("value",function(snapshot){
-     pullFire = snapshot.val().search;
+
+    //defining the snapshot value from firebase and setting it into a variable
+    
+    pullFire = snapshot.val().search;
       console.log(pullFire)
-      baseUrl = "https://api.punkapi.com/v2/beers"
+     //we are define our API url so we can use it later 
+    
+     baseUrl = "https://api.punkapi.com/v2/beers"
+    
+     //set our api and paramater in a variable
     url = baseUrl + "?beer_name=" + pullFire
     
+    //making the ajax call to get response from our api
     $.ajax({
     url: url,
     method: "GET"
   }).then(function(response){
     console.log(response);
-   
+   //this variable holds our response from the api and the where it is located 
     var results = response[0];
-    console.log(results)
+    //console.log(results)
       
     // var beerDiv = $("<div>")
+    //
     var imageUrl = results.image_url;
     var image = $("<img>").attr("src", imageUrl);
 
@@ -50,7 +55,7 @@ var config = {
      
 
      
-    $("pullFire").attr(image, name, date, description, food);
+    //$("pullFire").attr(image, name, date, description, food);
 
         // $().empty();    
        $("h1").append(name);
@@ -90,7 +95,7 @@ var config = {
     var results = pullRandom[0];
     console.log(results)
       
-    var beerDiv = $("<div>")
+    //var beerDiv = $("<div>")
     var imageUrl = results.image_url;
     var image = $("<img>").attr("src", imageUrl);
 
@@ -119,8 +124,28 @@ var config = {
 
   })
 
+  $("#review-btn").on("click", function(event){
+    event.preventDefault();
+
+    
+    
+    reviewSearch = $("#review-input").val();
+
+    
+    console.log(reviewSearch);
+    
+    database.ref().push({
+      reviews: reviewSearch,  
+   
+  })
+  reviewSearch = $("#review-input").val(" ");
 
 
+});
+
+database.ref().on("child_added", function(reviewSnapshot){
+  console.log(reviewSnapshot.val());
+})
 
 
   
