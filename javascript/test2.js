@@ -45,7 +45,7 @@ var config = {
     var name = results.name;
     var date = results.first_brewed;
     var description = results.description;
-    var food = results.food_pairing;
+    var food = results.food_pairing[0] + results.food_pairing[1] + result.food_pairing[2];
     
      
 
@@ -55,6 +55,11 @@ var config = {
         // $().empty();    
        $("h1").append(name);
        $(".parallax2").append(image);
+       $("#aboutBeer").append(description);
+       $("#dateBrewed").append(date);
+      //  $("#details").append(details);
+       $("#foodMerge").append(food);
+
     // beerDiv.append(image, name, date, description, food);
     // beerDiv.append(pullFire);
       
@@ -90,7 +95,7 @@ var config = {
     var results = pullRandom[0];
     console.log(results)
       
-    var beerDiv = $("<div>")
+    // var beerDiv = $("<div>")
     var imageUrl = results.image_url;
     var image = $("<img>").attr("src", imageUrl);
 
@@ -99,14 +104,21 @@ var config = {
     var name = results.name;
     var date = results.first_brewed;
     var description = results.description;
-    var food = results.food_pairing;
+    var food = results.food_pairing[0];
     
      
 
      
     $("pullRandom").attr(image, name, date, description, food);
-    beerDiv.append(image, name, date, description, food);
-    beerDiv.append(pullRandom);
+    // beerDiv.append(image, name, date, description, food);
+    // beerDiv.append(pullRandom);
+
+       $("h1").append(name);
+       $(".parallax2").append(image);
+       $("#aboutBeer").append(description);
+       $("#dateBrewed").append(date);
+      //  $("#details").append(details);
+       $("#foodMerge").append(food);
       
       
     console.log(results.name);
