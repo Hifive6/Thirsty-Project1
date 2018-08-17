@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
         <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,30 +67,71 @@
            <button id = "search">Search</button>
           <div id = "stuff" ></div>
     -->
-        <div class="jumbotron jumbotron-fluid">
-                <div id="stuff"></div>
-        </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/type.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
     
-    <div id="labelImage" class="parallax2"></div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+       
+        <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet">
+    <title>Beer</title>
+</head>
+
+<body>
 
         <div class="jumbotron jumbotron-fluid">
-            <div id="beerTitleName"><h1> Beer </h1></div>
-                <div id= "aboutBeer"><p> About:</p></div>
-                <div id= "dateBrewed"><p> Date Brewed:</p></div>
-                <div id= "details"><p> Details:</p></div>
-                <div id= "foodMerge"><p> Food:</p></div>
+                <div id="beerTitleName"><h1> Beer Name Here</h1></div>
+        </div>
+    
+    <div class="parallax2"></div>
+
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                        <div class="columns">
+                            <div id= "aboutBeer"><p> About:</p></div>
+                            <div id= "dateBrewed"><p> Date Brewed:</p></div>
+                            <div id= "details"><p> Details:</p></div>
+                            <div id= "foodMerge"><p> Food:</p></div>
+                        </div>
+                </div>
+            
     </div>
 
     <div class="parallax3"></div>
         <div class="jumbotron jumbotron-fluid">
-        <h1> Reviews </h1> 
-        <div id= "reviews"><p> Reviews:</p></div>    
+        <h2> Reviews </h2> 
+        <form>
+            <div class="form-group row">
+                <label for="minutes-input"> Add a Review:</label>
+                <input class="form-control" id="review-input" type="text">
+            </div>
+            <button class="btn btn-primary float-left" id="review-btn">Submit</button>
+          </form>
+          <br>
+          <div class="card mb-4"></div>
+                  <h3 class="card-title">Display reviews here</h3>
+                  <table class="table table-sm table-hover" id='review-table'>
+                      <tr>
+                        <th scope="col"></th>
+                      </tr>
+                  </table>
+                </div>
+              </div>
+        </div> 
     </div>
 
     <div class="parallax4"></div>
 
           
 </div>
+
 
 
 <head>
@@ -99,57 +141,6 @@
 
     </head>
 
-
-
-
-
-    <!-- Footer -->
-    <footer style="background-color: rgb(5, 172, 60)" class="footer page-footer font-small blue">
-
-
-            <section>
-                <ul id="services">
-    
-                    <li>
-                        <div class="facebook ">
-                            <a href="#">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <span></span>
-                    </li>
-    
-                    <li>
-                        <div class="linkedin">
-                            <a href="#">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <span></span>
-                    </li>
-    
-                    <li>
-                        <div class="github">
-                            <a href="#">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <span></span>
-                    </li>
-    
-                </ul>
-    
-    
-            </section>
-            <!-- Copyright -->
-            <div style="color: rgb(1, 3, 2)" class="footer-copyright text-center py-3">© 2018 Copyright:
-                <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-            </div>
-            <!-- Copyright -->
-    
-        </footer>
-        <!-- Footer -->
-    
 </body>
 <script src="javascript/javascript.js"></script>
 </html>

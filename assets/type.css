@@ -36,8 +36,36 @@ body, html {
 }
 
 
-h1{
+h2{
     font-family: 'Hanalei Fill', cursive;
     font-family: 'Do Hyeon', sans-serif;
     text-align: center;
 }
+
+
+.jumbotron {
+    padding: 0px;
+    margin: 50px;
+    text-justify: inherit;
+
+}
+
+.columns {
+    column-count: 2;
+    column-gap: 25px;
+    column-rule: 1px solid #454545;
+    
+  }
+
+  form{
+    text-align: center;
+    padding:10px;
+    margin:20px;
+  }
+
+  .card-title{
+    padding:10px;
+    margin:20px;
+  }
+
+  
