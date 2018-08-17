@@ -14,7 +14,7 @@ var config = {
 $("#search").on("click", function(event){
     event.preventDefault();
 
-    window.location.href = "test2.html";
+    window.location.href = "beer.html";
     
     beerSearch = $("#search-input").val();
 
@@ -33,7 +33,7 @@ $("#search").on("click", function(event){
 
     // window.location.href = "test2.html";
 
-    window.open("test2.html");
+    window.open("beer.html");
    
  randomUrl = "https://api.punkapi.com/v2/beers/random";
    $.ajax({
