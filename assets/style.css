@@ -5,13 +5,7 @@ body, html {
     
 }
 
-
-
-
-
 .parallax1 { 
-
-    
 
     /* The image used */
     background-image: url("../images/background.jpg");
@@ -60,8 +54,6 @@ h1{
 }
 
 
-
-
 /* css for social buttons */
 
 .max-width{
@@ -74,15 +66,13 @@ h1{
 }
 
 
-
 body {
     margin: 0;
     background-color: rgb(158, 155, 152);
     font-family: 'Raleway Dots', sans-serif;
   }
   
- 
-  
+
   section #services {
     text-align: center;
     transform: translatez(0);
@@ -128,8 +118,6 @@ body {
     font-size: 1.2em;
     text-align: center;
   }
- 
-
 
 @media screen and (max-width: 768px){
     .max-width{
@@ -156,6 +144,6 @@ body {
     background-size: cover;
    } 
 
-
+  
 }
 
