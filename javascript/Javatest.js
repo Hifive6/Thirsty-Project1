@@ -11,6 +11,9 @@ var config = {
      var database = firebase.database();
     console.log(database);
 
+
+
+
 $("#search").on("click", function(event){
     event.preventDefault();
 
@@ -24,8 +27,6 @@ $("#search").on("click", function(event){
        search: beerSearch,  
      });
    });
-
-
 
 
 
@@ -44,9 +45,12 @@ $("#search").on("click", function(event){
      console.log(response);
      
 
-      database.ref().child("random").set({
+      database.ref().child("search").set({
         random: response,  
+
+        
         });
+        
       })
 
 
