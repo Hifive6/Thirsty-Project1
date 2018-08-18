@@ -117,7 +117,7 @@ database.ref().on("value", function (snapshot) {
 
 database.ref().on("value", function (snapshot) {
   if (!pullRandom) {
-    pullRandom = snapshot.val().random.random;
+    pullRandom = snapshot.val().search.random;
     //console.log(pullRandom)
 
     var results = pullRandom[0];
