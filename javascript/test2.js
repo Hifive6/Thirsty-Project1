@@ -58,15 +58,31 @@ var results;
     var date = results.first_brewed;
     var description = results.description;
     var food = results.food_pairing;
+
+    
     
      
-
+    console.log(food);
      
     //$("pullFire").attr(image, name, date, description, food);
 
         // $().empty();    
-      //  $("h1").append(name);
-      //  $(".parallax2").append(image);
+
+       $("h1").append(name);
+       $(".parallax2").append(image);
+       $("#aboutBeer").append(description);
+       $("#dateBrewed").append(date);
+       for (var i = 0; i < food.length; i++){
+        $("#foodMerge").append(food[i] + "<br>");
+      }
+
+      
+
+
+      //  $("#foodMerge").append(food);
+      // document.getElementById("foodMerge").innerHTML = food;
+
+
     // beerDiv.append(image, name, date, description, food);
     // beerDiv.append(pullFire);
       
@@ -107,6 +123,7 @@ var results;
   var results = pullRandom[0];
   console.log(results)
       
+
   //   //var beerDiv = $("<div>")
   var imageUrl = results.image_url;
  var image = $("<img>").attr("src", imageUrl);
@@ -118,13 +135,23 @@ var results;
    var date = results.first_brewed;
    var description = results.description;
    var food = results.food_pairing;
+
     
      
 
      
-   // $("pullRandom").attr(image, name, date, description, food);
-  //   beerDiv.append(image, name, date, description, food);
-  //   beerDiv.append(pullRandom);
+
+    $("pullRandom").attr(image, name, date, description, food);
+    // beerDiv.append(image, name, date, description, food);
+    // beerDiv.append(pullRandom);
+
+      //  $("h1").append(name);
+      //  $(".parallax2").append(image);
+      //  $("#aboutBeer").append(description);
+      //  $("#dateBrewed").append(date);
+      // //  $("#details").append(details);
+      //  $("#foodMerge").append(food);
+
       
       
     console.log(name);
@@ -162,6 +189,7 @@ var results;
   });
 
   
+
   
 
 
@@ -170,6 +198,7 @@ database.ref("reviews").on("child_added", function(snapshot){
   console.log(fireReview);
 
   
+
 
   
   var newRow = $("<tr>").append(
