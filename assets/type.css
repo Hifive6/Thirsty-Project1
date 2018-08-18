@@ -48,12 +48,12 @@ h2{
 }
 
 
-.jumbotron {
+/* .jumbotron {
     padding: 0px;
     margin: 50px;
     text-justify: inherit;
 
-}
+} */
 
 .columns {
     column-count: 2;
