@@ -42,6 +42,7 @@ $("#search").on("click", function(event){
      method: "GET"
    }).then(function(response){
      console.log(response);
+     
 
       database.ref().child("random").set({
         random: response,  
