@@ -11,6 +11,8 @@ var config = {
   
 var pullFire;
 var pullRandom;
+var fireReview;
+var results;
   //Initializing FireBase
   firebase.initializeApp(config);
 
@@ -27,7 +29,7 @@ var pullRandom;
     //defining the snapshot value from firebase and setting it into a variable
     
     pullFire = snapshot.val().search.search;
-      console.log(pullFire)
+      //console.log(pullFire)
      //we are define our API url so we can use it later 
     
      baseUrl = "https://api.punkapi.com/v2/beers"
@@ -65,6 +67,7 @@ var pullRandom;
     //$("pullFire").attr(image, name, date, description, food);
 
         // $().empty();    
+
        $("h1").append(name);
        $(".parallax2").append(image);
        $("#aboutBeer").append(description);
@@ -78,6 +81,7 @@ var pullRandom;
 
       //  $("#foodMerge").append(food);
       // document.getElementById("foodMerge").innerHTML = food;
+
 
     // beerDiv.append(image, name, date, description, food);
     // beerDiv.append(pullFire);
@@ -112,28 +116,31 @@ var pullRandom;
 
 
   database.ref().on("value",function(snapshot){
-    if (pullRandom){
+    if (!pullRandom){
     pullRandom = snapshot.val().random.random;
+    //console.log(pullRandom)
 
-    var results = pullRandom[0];
-    // console.log(results)
+  var results = pullRandom[0];
+  console.log(results)
       
 
-    //var beerDiv = $("<div>")
-
-    var imageUrl = results.image_url;
-    var image = $("<img>").attr("src", imageUrl);
+  //   //var beerDiv = $("<div>")
+  var imageUrl = results.image_url;
+ var image = $("<img>").attr("src", imageUrl);
+  
 
       
      
-    name = results.name;
-    var date = results.first_brewed;
-    var description = results.description;
-    var food = results.food_pairing[0];
+   name = results.name;
+   var date = results.first_brewed;
+   var description = results.description;
+   var food = results.food_pairing;
+
     
      
 
      
+
     $("pullRandom").attr(image, name, date, description, food);
     // beerDiv.append(image, name, date, description, food);
     // beerDiv.append(pullRandom);
@@ -144,15 +151,18 @@ var pullRandom;
       //  $("#dateBrewed").append(date);
       // //  $("#details").append(details);
       //  $("#foodMerge").append(food);
+
       
       
-    // console.log(results.name);
-    // console.log(results.first_brewed)
-    // console.log(results.description);
-    // console.log(results.food_pairing)
+    console.log(name);
+    console.log(date)
+    console.log(description);
+    console.log(food)
 
+    // $("h1").append(name);
+    // $(".parallax2").append(image);
 
-  $("#more-stuff").html(beerDiv);
+  // $("#more-stuff").html(beerDiv);
     }
   });
   
@@ -174,27 +184,22 @@ var pullRandom;
   });
 
 
-  //newReview = $("#review-input").val(" ")
+  
   
   });
 
   
-  // var urlRef = rootRef.child("user1/DAA Notes/URL");
-  // urlRef.once("value", function(snapshot) {
-  //   snapshot.forEach(function(child) {
-  //     console.log(child.key+": "+child.val());
-  //   });
-  // });
+
+  
 
 
-//database.ref("reviews/child.added/reviews").on("child_added", function(snapshot){
-  //var fireReview = snapshot.val().
+database.ref("reviews").on("child_added", function(snapshot){
+  fireReview = snapshot.val().reviews;
+  console.log(fireReview);
 
-  //})
-//})
-var fireReview = database.child("reviews/child.key/reviews");
-fireReview.once("value", function(snapshot){
-snapshot.forEach( function(child){
+  
+
+
   
   var newRow = $("<tr>").append(
     
@@ -203,12 +208,6 @@ snapshot.forEach( function(child){
 
   $("#review-table").prepend(newRow);
 });
-});
-// database.ref().on("child_added", function(snapshot){
-//     //console.log(snapshot.val());
-// //var fireReview = data;
-// console.log(fireReview);
-//   //$("#review-table").prepend(review)
 
   
 
