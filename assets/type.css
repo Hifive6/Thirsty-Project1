@@ -75,6 +75,11 @@ h2{
     margin:20px;
   }
 
+  .scroll {
+      overflow-y: scroll;
+      height: 150px;
+  }
+
   
 
 

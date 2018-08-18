@@ -167,8 +167,8 @@ var pullRandom;
 //database.ref("reviews/child.added/reviews").on("child_added", function(snapshot){
   //var fireReview = snapshot.val().
 
-  })
-})
+  //})
+//})
 var fireReview = database.child("reviews/child.key/reviews");
 fireReview.once("value", function(snapshot){
 snapshot.forEach( function(child){
