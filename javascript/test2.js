@@ -9,19 +9,24 @@ var config = {
     messagingSenderId: "762189077339"
   };
   
-
+var pullFire;
+var pullRandom;
   //Initializing FireBase
   firebase.initializeApp(config);
 
 //setting our information from firebase into variable
   var database = firebase.database();
+  
+
+  
 
   //grabbing the value from firebase     
   database.ref().on("value",function(snapshot){
-
+    if(!pullFire){
+    //$("h1").empty();
     //defining the snapshot value from firebase and setting it into a variable
     
-    pullFire = snapshot.val().search;
+    pullFire = snapshot.val().search.search;
       console.log(pullFire)
      //we are define our API url so we can use it later 
     
@@ -35,7 +40,7 @@ var config = {
     url: url,
     method: "GET"
   }).then(function(response){
-    console.log(response);
+    //console.log(response);
    //this variable holds our response from the api and the where it is located 
     var results = response[0];
     //console.log(results)
@@ -64,10 +69,10 @@ var config = {
     // beerDiv.append(pullFire);
       
       
-    console.log(results.name);
-    console.log(results.first_brewed)
-    console.log(results.description);
-    console.log(results.food_pairing)
+    // console.log(results.name);
+    // console.log(results.first_brewed)
+    // console.log(results.description);
+    // console.log(results.food_pairing)
 
 
   // $("#more-stuff").html(beerDiv);
@@ -85,15 +90,19 @@ var config = {
     // //figure this if else site
     // }   
 //beerInfo(response);
-    // 
+      // 
+  
   }); 
+  }
   }); 
+
 
   database.ref().on("value",function(snapshot){
-    pullRandom = snapshot.val().random;
+    if (pullRandom){
+    pullRandom = snapshot.val().random.random;
 
     var results = pullRandom[0];
-    console.log(results)
+    // console.log(results)
       
     //var beerDiv = $("<div>")
     var imageUrl = results.image_url;
@@ -114,16 +123,16 @@ var config = {
     beerDiv.append(pullRandom);
       
       
-    console.log(results.name);
-    console.log(results.first_brewed)
-    console.log(results.description);
-    console.log(results.food_pairing)
+    // console.log(results.name);
+    // console.log(results.first_brewed)
+    // console.log(results.description);
+    // console.log(results.food_pairing)
 
 
   $("#more-stuff").html(beerDiv);
-
-  })
-
+    }
+  });
+  
 
 
 
@@ -131,35 +140,54 @@ var config = {
     event.preventDefault();
 
     
-    var newReview = $("#review-input").val();
+    newReview = $("#review-input").val();
     
 
     
     
     
-    database.ref().push({
+    database.ref().child("reviews").push({
       reviews: newReview,   
   });
 
 
-  newReview = $("#review-input").val(" ")
+  //newReview = $("#review-input").val(" ")
   
   });
 
+  
+  // var urlRef = rootRef.child("user1/DAA Notes/URL");
+  // urlRef.once("value", function(snapshot) {
+  //   snapshot.forEach(function(child) {
+  //     console.log(child.key+": "+child.val());
+  //   });
+  // });
 
-database.ref().on("child_added", function(snapshot){
-    //console.log(snapshot.val());
-var fireReview = snapshot.val().reviews;
-console.log(fireReview);
-  //$("#review-table").prepend(review)
 
+//database.ref("reviews/child.added/reviews").on("child_added", function(snapshot){
+  //var fireReview = snapshot.val().
+
+  })
+})
+var fireReview = database.child("reviews/child.key/reviews");
+fireReview.once("value", function(snapshot){
+snapshot.forEach( function(child){
+  
   var newRow = $("<tr>").append(
-    $("<td>").text(name),
-    $("<td>").text("<br><hr>" + fireReview),
+    
+    $("<td>").html(name + "<br> " + "<br>" + fireReview + "<hr><br>"),
   );
 
   $("#review-table").prepend(newRow);
 });
+});
+// database.ref().on("child_added", function(snapshot){
+//     //console.log(snapshot.val());
+// //var fireReview = data;
+// console.log(fireReview);
+//   //$("#review-table").prepend(review)
+
+  
 
 
 

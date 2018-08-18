@@ -20,7 +20,7 @@ $("#search").on("click", function(event){
     
     console.log(beerSearch);
     
-    database.ref().set({
+    database.ref().child("search").set({
        search: beerSearch,  
      });
    });
@@ -43,7 +43,7 @@ $("#search").on("click", function(event){
    }).then(function(response){
      console.log(response);
 
-      database.ref().set({
+      database.ref().child("random").set({
         random: response,  
         });
       })
