@@ -45,10 +45,12 @@ var config = {
     var name = results.name;
     var date = results.first_brewed;
     var description = results.description;
-    var food = results.food_pairing[0] + results.food_pairing[1] + result.food_pairing[2];
+    var food = results.food_pairing;
+
+    
     
      
-
+    console.log(food);
      
     $("pullFire").attr(image, name, date, description, food);
 
@@ -57,8 +59,15 @@ var config = {
        $(".parallax2").append(image);
        $("#aboutBeer").append(description);
        $("#dateBrewed").append(date);
-      //  $("#details").append(details);
-       $("#foodMerge").append(food);
+       for (var i = 0; i < food.length; i++){
+        $("#foodMerge").append(food[i]);
+      }
+
+      
+
+
+      //  $("#foodMerge").append(food);
+      // document.getElementById("foodMerge").innerHTML = food;
 
     // beerDiv.append(image, name, date, description, food);
     // beerDiv.append(pullFire);
@@ -113,12 +122,12 @@ var config = {
     // beerDiv.append(image, name, date, description, food);
     // beerDiv.append(pullRandom);
 
-       $("h1").append(name);
-       $(".parallax2").append(image);
-       $("#aboutBeer").append(description);
-       $("#dateBrewed").append(date);
-      //  $("#details").append(details);
-       $("#foodMerge").append(food);
+      //  $("h1").append(name);
+      //  $(".parallax2").append(image);
+      //  $("#aboutBeer").append(description);
+      //  $("#dateBrewed").append(date);
+      // //  $("#details").append(details);
+      //  $("#foodMerge").append(food);
       
       
     console.log(results.name);
