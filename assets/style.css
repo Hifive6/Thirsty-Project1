@@ -5,6 +5,17 @@ body, html {
     
 }
 
+
+
+h1{
+    
+    font-family: ‘Monoton’, cursive;
+}
+
+.background-jumbo{
+    background-image: url('../images/gray.svg');
+}
+
 .parallax1 { 
 
     /* The image used */

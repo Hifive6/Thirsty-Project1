@@ -17,16 +17,17 @@ $("#search").on("click", function(event){
     window.location.href = "beer.html";
     
     beerSearch = $("#search-input").val();
-
-    
-    
     
     console.log(beerSearch);
     
-    database.ref().set({
+    database.ref().child("search").set({
        search: beerSearch,  
      });
    });
+
+
+
+
 
    $("#random").on("click", function(event){
     event.preventDefault();
@@ -34,14 +35,15 @@ $("#search").on("click", function(event){
     // window.location.href = "test2.html";
 
     window.open("beer.html");
-   
- randomUrl = "https://api.punkapi.com/v2/beers/random";
+   randomUrl = "https://api.punkapi.com/v2/beers/random";
+ 
    $.ajax({
      url: randomUrl,
      method: "GET"
    }).then(function(response){
+     console.log(response);
 
-      database.ref().set({
+      database.ref().child("random").set({
         random: response,  
         });
       })

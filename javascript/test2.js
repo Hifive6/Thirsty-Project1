@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 var config = {
     apiKey: "AIzaSyBiJq9sJSLN5FClhkkDqTo-fi9j4PxGykQ",
     authDomain: "thirsty-project1.firebaseapp.com",
@@ -15,34 +9,50 @@ var config = {
     messagingSenderId: "762189077339"
   };
   
-
-
+var pullFire;
+var pullRandom;
+  //Initializing FireBase
   firebase.initializeApp(config);
 
+//setting our information from firebase into variable
   var database = firebase.database();
-       
+  
+
+  
+
+  //grabbing the value from firebase     
   database.ref().on("value",function(snapshot){
-     pullFire = snapshot.val().search;
+    if(!pullFire){
+    //$("h1").empty();
+    //defining the snapshot value from firebase and setting it into a variable
+    
+    pullFire = snapshot.val().search.search;
       console.log(pullFire)
-      baseUrl = "https://api.punkapi.com/v2/beers"
+     //we are define our API url so we can use it later 
+    
+     baseUrl = "https://api.punkapi.com/v2/beers"
+    
+     //set our api and paramater in a variable
     url = baseUrl + "?beer_name=" + pullFire
     
+    //making the ajax call to get response from our api
     $.ajax({
     url: url,
     method: "GET"
   }).then(function(response){
-    console.log(response);
-   
+    //console.log(response);
+   //this variable holds our response from the api and the where it is located 
     var results = response[0];
-    console.log(results)
+    //console.log(results)
       
     // var beerDiv = $("<div>")
+    //
     var imageUrl = results.image_url;
     var image = $("<img>").attr("src", imageUrl);
 
       
      
-    var name = results.name;
+    name = results.name;
     var date = results.first_brewed;
     var description = results.description;
     var food = results.food_pairing;
@@ -52,7 +62,7 @@ var config = {
      
     console.log(food);
      
-    $("pullFire").attr(image, name, date, description, food);
+    //$("pullFire").attr(image, name, date, description, food);
 
         // $().empty();    
        $("h1").append(name);
@@ -73,10 +83,10 @@ var config = {
     // beerDiv.append(pullFire);
       
       
-    console.log(results.name);
-    console.log(results.first_brewed)
-    console.log(results.description);
-    console.log(results.food_pairing)
+    // console.log(results.name);
+    // console.log(results.first_brewed)
+    // console.log(results.description);
+    // console.log(results.food_pairing)
 
 
   // $("#more-stuff").html(beerDiv);
@@ -94,23 +104,29 @@ var config = {
     // //figure this if else site
     // }   
 //beerInfo(response);
-    // 
+      // 
+  
   }); 
+  }
   }); 
+
 
   database.ref().on("value",function(snapshot){
-    pullRandom = snapshot.val().random;
+    if (pullRandom){
+    pullRandom = snapshot.val().random.random;
 
     var results = pullRandom[0];
-    console.log(results)
+    // console.log(results)
       
-    // var beerDiv = $("<div>")
+
+    //var beerDiv = $("<div>")
+
     var imageUrl = results.image_url;
     var image = $("<img>").attr("src", imageUrl);
 
       
      
-    var name = results.name;
+    name = results.name;
     var date = results.first_brewed;
     var description = results.description;
     var food = results.food_pairing[0];
@@ -130,17 +146,71 @@ var config = {
       //  $("#foodMerge").append(food);
       
       
-    console.log(results.name);
-    console.log(results.first_brewed)
-    console.log(results.description);
-    console.log(results.food_pairing)
+    // console.log(results.name);
+    // console.log(results.first_brewed)
+    // console.log(results.description);
+    // console.log(results.food_pairing)
 
 
   $("#more-stuff").html(beerDiv);
+    }
+  });
+  
+
+
+
+  $("#review-btn").on("click", function(event){
+    event.preventDefault();
+
+    
+    newReview = $("#review-input").val();
+    
+
+    
+    
+    
+    database.ref().child("reviews").push({
+      reviews: newReview,   
+  });
+
+
+  //newReview = $("#review-input").val(" ")
+  
+  });
+
+  
+  // var urlRef = rootRef.child("user1/DAA Notes/URL");
+  // urlRef.once("value", function(snapshot) {
+  //   snapshot.forEach(function(child) {
+  //     console.log(child.key+": "+child.val());
+  //   });
+  // });
+
+
+//database.ref("reviews/child.added/reviews").on("child_added", function(snapshot){
+  //var fireReview = snapshot.val().
 
   })
+})
+var fireReview = database.child("reviews/child.key/reviews");
+fireReview.once("value", function(snapshot){
+snapshot.forEach( function(child){
+  
+  var newRow = $("<tr>").append(
+    
+    $("<td>").html(name + "<br> " + "<br>" + fireReview + "<hr><br>"),
+  );
 
+  $("#review-table").prepend(newRow);
+});
+});
+// database.ref().on("child_added", function(snapshot){
+//     //console.log(snapshot.val());
+// //var fireReview = data;
+// console.log(fireReview);
+//   //$("#review-table").prepend(review)
 
+  
 
 
 
