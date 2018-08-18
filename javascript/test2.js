@@ -113,7 +113,7 @@ var config = {
     var name = results.name;
     var date = results.first_brewed;
     var description = results.description;
-    var food = results.food_pairing[0];
+    var food = results.food_pairing;
     
      
 
@@ -122,13 +122,13 @@ var config = {
     // beerDiv.append(image, name, date, description, food);
     // beerDiv.append(pullRandom);
 
-      //  $("h1").append(name);
-      //  $(".parallax2").append(image);
-      //  $("#aboutBeer").append(description);
-      //  $("#dateBrewed").append(date);
-      // //  $("#details").append(details);
-      //  $("#foodMerge").append(food);
-      
+    $("h1").append(name);
+    $(".parallax2").append(image);
+    $("#aboutBeer").append(description);
+    $("#dateBrewed").append(date);
+    for (var i = 0; i < food.length; i++){
+     $("#foodMerge").append(food[i] + "<br>");
+   }
       
     console.log(results.name);
     console.log(results.first_brewed)
