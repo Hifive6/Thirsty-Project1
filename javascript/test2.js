@@ -60,7 +60,7 @@ var config = {
        $("#aboutBeer").append(description);
        $("#dateBrewed").append(date);
        for (var i = 0; i < food.length; i++){
-        $("#foodMerge").append(food[i]);
+        $("#foodMerge").append(food[i] + "<br>");
       }
 
       
