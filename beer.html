@@ -1,73 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-        <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <link rel="stylesheet" type="text/css" href="assets/type.css">
-                <link rel="stylesheet" type="text/css" href="assets/style.css">
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                <!-- <script src="javascript/javascript.js"></script> -->
-                <script src="javascript/firebasesearch.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                <!-- <script src="javascript/button.js"></script> -->
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-                  crossorigin="anonymous">
-                <title>Document</title>
-              </head>
-
-
-
-<body>
-
-
-
-
-        <header>
-
-                <div class="open">
-              
-                  <span class="cls"></span>
-              
-                  <span>
-              
-                    <ul class="sub-menu ">
-              
-                      <li> <a href="#">Home</a> </li>
-              
-                      <li> <a href="#">Contact</a> </li>
-              
-                      <li> <a href="#">About</a> </li>
-              
-                      <li> <a href="#">Blog</a> </li>
-              
-                    </ul>
-              
-                  </span>
-              
-                  <span class="cls"></span>
-              
-                </div>
-              
-              
-              </header>
-
-   
-    <!--
-    <form id="beer">
-            <label for="beer-input">Look for your beer</label>
-            <input type="text" id="search-input"><br>
-             This button will trigger our AJAX call 
-            <input id="search" type="submit" value="Beer Search">
-            <span class="validity"></span>
-          </form>
-            <button id = "random">Random Search</button>
-           <button id = "search">Search</button>
-          <div id = "stuff" ></div>
-    -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,30 +8,80 @@
     <link rel="stylesheet" type="text/css" href="assets/type.css">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
-    
+    <!-- <script src="javascript/javascript.js"></script> -->
+    <script src="javascript/firebasesearch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascript/button.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-       
-        <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet">
-    <title>Beer</title>
+    <title>Document</title>
 </head>
+
 
 <body>
 
-        <div class="jumbotron jumbotron-fluid">
+    <header>
 
-                <div id="beerTitleName"><h1></h1></div>
+        <div class="open">
 
-                <!-- <div id="beerTitleName"><h1> </h1></div>
+            <span class="cls"></span>
 
+            <span>
 
-                <div id="beerTitleName"><h1></h1></div> -->
+                <ul class="sub-menu ">
 
+                    <li> <a href="index.html">Home</a> </li>
+
+                    <li> <a href="beer.html">About/Reviews</a> </li>
+
+                    <li> <a href="map.html">Map</a> </li>
+
+                </ul>
+
+            </span>
+
+            <span class="cls"></span>
 
         </div>
-    
-    <div class="parallax2"></div>
+
+
+    </header>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="assets/type.css">
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet">
+        <title>Beer</title>
+    </head>
+
+
+
+    <div class="background-jumbo jumbotron">
+
+
+        <div id="beerTitleName">
+            <h1></h1>
+
+        </div>
+    </div>
+
+    <div class="parallax2" id="image">
+
+    </div>
+
+
+    <div class=" background-jumbo jumbotron jumbotron-fluid">
+
+
 
         <div class="jumbotron jumbotron-fluid">
             
@@ -109,47 +92,52 @@
                             <div id= "foodMerge"><p> Food:</p></div>
                         </div> 
                 </div> 
+               
             
+
+            </div>
+
+        </div>
+    </div>
+
     </div>
 
     <div class="parallax3"></div>
-        <div class="jumbotron jumbotron-fluid">
-        <h2> Reviews </h2> 
+    <div class=" background-jumbo jumbotron">
+        <h2> Reviews </h2>
+        <div class="container" >
         <form>
             <div class="form-group row">
                 <label for="minutes-input"> Add a Review:</label>
                 <input class="form-control" id="review-input" type="text">
             </div>
             <button class="btn btn-primary float-left" id="review-btn">Submit</button>
-          </form>
-          <br>
-          <div class="card mb-4"></div>
-                  <h3 class="card-title">Display reviews here</h3>
-                  <table class="table table-sm table-hover" id='review-table'>
-                      <tr>
-                        <th scope="col"></th>
-                      </tr>
-                  </table>
-                </div>
-              </div>
-        </div> 
+            </form>
+
+            <br>
+            <div class="card mb-4"></div>
+            <h3 class="card-title">Display reviews here</h3>
+            <table class="table table-sm table-hover scroll" id='review-table'>
+                <tr>
+                    <th scope="col"></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+    </div>
     </div>
 
     <div class="parallax4"></div>
 
-          
-</div>
+
+    </div>
 
 
 
-<head>
-
-        <link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    </head>
 
 </body>
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script src="javascript/test2.js"></script>
+
 </html>
